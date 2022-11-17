@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: bikes
+#
+#  id                :integer          not null, primary key
+#  displacement      :integer
+#  manufactured_date :datetime
+#  name              :string
+#  price             :float
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#  manufacturer_id   :integer
+#
+# Indexes
+#
+#  index_bikes_on_manufactured_date  (manufactured_date)
+#  index_bikes_on_name               (name) UNIQUE
+#
+
+one:
+  name: MyString
+  manufactured_date: 2022-11-17 00:48:56
+  Manufacturer: MyString
+  price: 1
+  Displacement: 1
+
+two:
+  name: MyString
+  manufactured_date: 2022-11-17 00:48:56
+  Manufacturer: MyString
+  price: 1
+  Displacement: 1

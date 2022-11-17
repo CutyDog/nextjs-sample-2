@@ -3,4 +3,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  scope :api do
+    resources :manufacturers, only: [:index, :show]
+    resources :bikes, only: [:index]
+  end
 end

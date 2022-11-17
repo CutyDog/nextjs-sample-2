@@ -10,5 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_16_161857) do
+  create_table "bikes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "manufactured_date"
+    t.integer "manufacturer_id"
+    t.float "price"
+    t.integer "displacement"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["manufactured_date"], name: "index_bikes_on_manufactured_date"
+    t.index ["name"], name: "index_bikes_on_name", unique: true
+  end
+
+  create_table "manufacturers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "country"
+    t.index ["name"], name: "index_manufacturers_on_name", unique: true
+  end
+
 end
