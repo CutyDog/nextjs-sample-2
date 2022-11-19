@@ -23,3 +23,7 @@ export const getManufacturersUrl = (id?: number): string => {
   }
   return getUrl(['manufacturers', id.toString()]);
 }
+
+export const getManufacturerBikesUrl = (id: number): string => {
+  return getUrl(['manufacturers', id.toString(), 'bikes']);
+}
